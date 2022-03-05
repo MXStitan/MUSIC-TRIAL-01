@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+<header>
+<div class="tophead">
+    <div class="brandlogo">
+        Zaid aka ZPOTIFY Lyrics Finder
+    </div>
+<div>
+    <span class="menulines" onclick="openNav()">
+        &#9776;
+    </span>
+</div>
+</div>
+</header>
+
+<div class="sidenav" id="mySidenav">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+&times;</a>
+<a href="/index.html"><i class="fa fa-home" aria-hidden="true"></i>Home </a>
+<a href="/HTML/music.html"><i class="fa fa-home" aria-hidden="true"></i>Music Player </a>
+<a href="/HTML/lyrics.html"><i class="fa fa-home" aria-hidden="true"></i>Lyrics </a>
+<a href="https://www.youtube.com/channel/UCmGuosHqctgFA7G5NfageQQ"><i class="fa fa-home" aria-hidden="true"></i>Youtube </a>
+</div>
+
+
+
+     <!-- <div class="bodypic">
+    <img src="/IMAGES/titan2.jpg" alt="">
+</div> -->
+
+
+    <!-- <div class="main_div">
+        <div class="music_container">
+            <h2 id="title">ncs song 1</h2>
+            <h3 id="artist">Zaid Shaikh</h3>
+            <div class="img_container">
+            <img src="/images/m1.jpg" alt="">
+            </div>
+            <audio src="/music/m1.mp3"></audio> -->
+           
+
+        <!-- //controls -->
+        <!-- <div class="music_controls">
+            <i class="fas fa-backward" id="prev" title="Previous"></i>
+            <i class="fas fa-play main-button" id="play" title="Play"></i>
+            <i class="fas fa-forward" id="next" title="Next"></i>
+        </div>
+        </div>
+    </div>
+
+
+    <script>
+        const music=document.querySelector("audio");
+        const img= document.querySelector("img");
+        const play=document.getElementById("play");
+        const title=document.getElementById("title");
+        const artist=document.getElementById("artist");
+        const prev=document.getElementById("prev");
+        const next=document.getElementById("next");
+
+        const songs=[
+            
+        {
+            name:"m1",
+            title:"doorie",
+            artist:"Zaid Shaikh",
+        },
+        
+        {
+            name:"m2",
+            title:"NCS Song 2",
+            artist:"Anonymous",
+        },
+        {
+            name:"m3",
+            title:"NCS Song 3",
+            artist:"Zyan Malik",
+        }
+        ]; -->
+
+
+
+
+<!-- //for play
+//         let isPlaying=false;
+//         const playMusic= () => {
+//         isPlaying=true;
+//         music.play();
+//         play.classList.replace("fa-play", "fa-pause");
+//         img.classList.add("anime");
+//         };
+
+//         //for pause
+//        const pauseMusic= () => {
+//         isPlaying=false;
+//         music.pause();
+//         play.classList.replace("fa-pause", "fa-play");
+//         img.classList.remove("anime");
+// };
+    play.addEventListener("click",()=> {
+    // if(isPlaying){
+    //     pauseMusic();
+    // }else{
+    //     playMusic();
+    // }
+//     isPlaying ? pauseMusic() : playMusic();
+// });
+//     //next song
+
+//     const loadSong= (songs) =>{
+//     title.textContent=songs.title;
+//     artist.textContent=songs.artist;
+//     music.src= "/music/"+ songs.name + ".mp3";
+//     img.src= "/images/"+ songs.name + ".jpg";
+// };
+    
+
+//     songIndex=0;
+    //loadSong(songs[1]);
+
+    // const nextSong= () =>{
+    //     songIndex=(songIndex+1) % songs.length;
+    //     loadSong(songs[songIndex]);
+    //     playMusic();
+    // };
+
+    // const prevSong= () =>{
+    //     songIndex=(songIndex-1 + songs.length) % songs.length;
+    //     loadSong(songs[songIndex]);
+    //     playMusic();
+    // };
+
+
+
+    // next.addEventListener("click", nextSong);
+    // prev.addEventListener("click", prevSong);
+
+//sidenav
+
+//     </script>
+    <script> 
+        const openNav= () =>{
+     document.getElementById('mySidenav').style.width="250px";
+ }
+ const closeNav= () =>{
+     document.getElementById('mySidenav').style.width="0px";
+ }
+     </script> -->
+     <script> 
+        const openNav= () =>{
+     document.getElementById('mySidenav').style.width="250px";
+ }
+ const closeNav= () =>{
+     document.getElementById('mySidenav').style.width="0px";
+ }
+     </script>
+
+<!-- lyrics part -->
+
+<header>
+    <div class="container">
+        <h1>Lyrics Search App</h1>
+        <form id="form"  autocomplete="off">
+            <input type="text" id="search"  placeholder="Search artiste or song">
+            <button>Search</button>
+        </form>
+    </div>
+</header>
+
+<section>
+    <div class="container" id="result">
+        <p>Enter Song or Artiste in the field above</p> 
+    </div>
+</section>
+
+
+<style>
+    /* * {
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+} */
+
+html {
+    font-size: 10px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    /* background: url(./images/m6.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed; */
+    height: 100vh;
+    position: relative;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .container{
+    padding: 4rem 0;
+    text-align: center;
+    background-image: url('/images/m13.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0 0 5rem 5rem;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: cyan;
+    padding-bottom: 1rem;
+}
+
+form input,
+form button {
+    outline: none;
+    border: none;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-family: inherit;
+}
+form input {
+    width: 50%;
+    border-radius: 1rem 1rem 1rem 1rem;
+}
+
+form button {
+  background-color: cyan;
+    color: black;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+form button:hover {
+    transform: scale(0.9);
+}
+
+section .container {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    padding: 3rem 0;
+}
+
+.songs {
+    width: 70%;
+    list-style: none;
+    margin:0 auto;
+    padding: 2rem 0;
+}
+
+.songs li {
+    font-size: 1.4rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.songs li span{
+    font-size: 1.4rem;
+    background-color: var(--color-primary);
+    padding: 5px;
+    margin: 5px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+</style>
+
+<script>
+
+const form = document.getElementById("form");
+const search = document.getElementById("search");
+const result = document.getElementById("result");
+
+const apiURL = "https://api.lyrics.ovh";
+
+// Get Search Value
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    searchValue = search.value.trim();
+
+    if (!searchValue) {
+        alert("Nothing to search");
+    } else {
+        beginSearch(searchValue);
+    }
+})
+
+// Search function
+async function beginSearch(searchValue) {
+    const searchResult = await fetch(`${apiURL}/suggest/${searchValue}`);
+    const data = await searchResult.json();
+
+    displayData(data);
+}
+
+// Display Search Result
+function displayData(data) {
+    result.innerHTML = `
+    <ul class="songs">
+      ${data.data
+        .map(song=> `<li>
+                    <div>
+                        <strong>${song.artist.name}</strong> -${song.title} 
+                    </div>
+                    <span data-artist="${song.artist.name}" data-songtitle="${song.title}">Get Lyrics</span>
+                </li>`
+        )
+        .join('')}
+    </ul>
+  `;
+}
+
+//event listener in get lyrics button
+result.addEventListener('click', e=>{
+    const clickedElement = e.target;
+
+    //checking clicked elemet is button or not
+    if (clickedElement.tagName === 'SPAN'){
+        const artist = clickedElement.getAttribute('data-artist');
+        const songTitle = clickedElement.getAttribute('data-songtitle');
+        
+        getLyrics(artist, songTitle)
+    }
+})
+
+// Get lyrics for song
+async function getLyrics(artist, songTitle) {
+    const response = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
+    const data = await response.json();
+  
+    const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
+  
+    result.innerHTML = `<h2><strong>${artist}</strong> - ${songTitle}</h2>
+    <p>${lyrics}</p>`;
+  
+  }
+</script>
+
+
+</body>
+</body>
+</html>
